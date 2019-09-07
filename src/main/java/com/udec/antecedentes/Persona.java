@@ -9,7 +9,7 @@ import java.io.Serializable;
  *
  * @author ASUS
  */
-public class Persona implements Serializable{
+public abstract class Persona{
     
     private String nombre;
     private String cedula;

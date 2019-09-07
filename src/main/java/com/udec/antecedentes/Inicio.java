@@ -17,7 +17,8 @@ public class Inicio {
     }
     
     public static void main(String[] args) {
-       Inicio inicio=new Inicio();
+       Logica l =new Logica();
+       
     }
     
 }

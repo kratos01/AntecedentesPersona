@@ -12,23 +12,26 @@ import java.util.Date;
  *
  * @author ASUS
  */
-public class Antecedente implements Serializable{
+public class Antecedente extends Persona{
     
-    private Date fecha;
+    private String fecha;
     private String descripcion;
-    private String tipoAntecedente;
+    
 
-    public Antecedente(Date fecha, String descripcion, String tipoAntecedente) {
+    public Antecedente(String fecha, String descripcion, String nombre, String cedula, int edad, String genero) {
+        super(nombre, cedula, edad, genero);
         this.fecha = fecha;
         this.descripcion = descripcion;
-        this.tipoAntecedente = tipoAntecedente;
+        
     }
+
+   
     
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
@@ -38,14 +41,6 @@ public class Antecedente implements Serializable{
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
-    }
-
-    public String getTipoAntecedente() {
-        return tipoAntecedente;
-    }
-
-    public void setTipoAntecedente(String tipoAntecedente) {
-        this.tipoAntecedente = tipoAntecedente;
     }
     
 }
