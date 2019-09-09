@@ -6,19 +6,13 @@
 package com.udec.antecedentes;
 
 /**
- *
- * @author ASUS
+ * Esta clase es donde inicia el programa.
+ * @author Cristian Perez
+ * @author Julian Arias
  */
 public class Inicio {
-
-    public Inicio(){
-
-        
-    }
-    
     public static void main(String[] args) {
-       Logica l =new Logica();
-       
+       Logica l =new Logica();     
     }
     
 }

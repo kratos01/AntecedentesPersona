@@ -4,19 +4,37 @@
  * and open the template in the editor.
  */
 package com.udec.antecedentes;
+
 import java.io.Serializable;
 /**
- *
+ * En esta clase se definen los atributos y los metodos de la persona.
  * @author ASUS
  */
-public abstract class Persona{
-    
+public class Persona implements Serializable{
+    /**
+     * identificador unico*/
+    private static final long serialVersionUID = 1L;
+    /**
+     * Atributo que recibe el nombre*/
     private String nombre;
-    private String cedula;
+    /**
+     * Atributo que recibe la cedula*/
+    private int cedula;
+    /**
+     * Atributo que recibe la edad*/
     private int edad;
+    /**
+     * Atributo que recibe el genero*/
     private String genero;
 
-    public Persona(String nombre, String cedula, int edad, String genero) {
+    /**
+     * Constructor de la clase.
+     * @param nombre
+     * @param cedula
+     * @param edad
+     * @param genero 
+     */
+    public Persona(String nombre, int cedula, int edad, String genero) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.edad = edad;
@@ -31,11 +49,11 @@ public abstract class Persona{
         this.nombre = nombre;
     }
 
-    public String getCedula() {
+    public int getCedula() {
         return cedula;
     }
 
-    public void setCedula(String cedula) {
+    public void setCedula(int cedula) {
         this.cedula = cedula;
     }
 

@@ -6,27 +6,41 @@
 package com.udec.antecedentes;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
- *
+ * En esta clase se definen los atributos y metodos de antecedente.
  * @author ASUS
  */
-public class Antecedente extends Persona{
-    
+public class Antecedente implements Serializable{
+    /**
+     * identificador unico*/
+    private static final long serialVersionUID = 1L;
+    /**
+     * Atributo que recibe fecha*/
     private String fecha;
+    /**
+     * Atributo que recibe descripcion de antecedente*/
     private String descripcion;
-    
+    /**
+     * Atributo que recibe tipo de antecedente*/
+    private String tipoAntecedente;
+    /**
+     * Atributo que recibe cedula de la persona*/
+    private int cedulaper;
 
-    public Antecedente(String fecha, String descripcion, String nombre, String cedula, int edad, String genero) {
-        super(nombre, cedula, edad, genero);
+    /**
+     * Constructor de la clase.
+     * @param fecha 
+     * @param descripcion
+     * @param tipoAntecedente
+     * @param cedulaper 
+     */
+    public Antecedente(String fecha, String descripcion, String tipoAntecedente, int cedulaper) {
         this.fecha = fecha;
         this.descripcion = descripcion;
-        
+        this.tipoAntecedente = tipoAntecedente;
+        this.cedulaper = cedulaper;
     }
-
-   
-    
     public String getFecha() {
         return fecha;
     }
@@ -41,6 +55,22 @@ public class Antecedente extends Persona{
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public String getTipoAntecedente() {
+        return tipoAntecedente;
+    }
+
+    public void setTipoAntecedente(String tipoAntecedente) {
+        this.tipoAntecedente = tipoAntecedente;
+    }
+
+    public int getCedulaper() {
+        return cedulaper;
+    }
+
+    public void setCedulaper(int cedulaper) {
+        this.cedulaper = cedulaper;
     }
     
 }
